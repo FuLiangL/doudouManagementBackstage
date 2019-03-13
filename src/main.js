@@ -111,3 +111,8 @@ new Vue({
     //components: { App }
     render: h => h(App)
 }).$mount('#app');
+if(process.env.NODE_ENV === 'development') {
+    console.log(process.env.BUILD_INFO, 'color:#fff;background-color:#fd6720;border-radius:4px;padding:2px 0;')
+} else if(process.env.NODE_ENV === 'production') {
+    console.log(process.env.BUILD_INFO, 'color:#fff;background-color:#fd6720;border-radius:4px;padding:2px 0;')
+}
